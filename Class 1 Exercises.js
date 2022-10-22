@@ -100,13 +100,11 @@ console.log('Find the Middle Date Answer:')
 
 const date1 = new Date(2020, 1, 1);
 const date2 = new Date(2020, 4, 1);
-// var a = new Date('2018-01-17T21:18:00')
-// var b = new Date('2018-01-16T21:17:00')
-var diff = date2.getTime() - date1.getTime();   
-console.log(`diff is ${diff}`)
-    
-var daydiff = diff / (1000 * 60 * 60 * 24);   
-console.log(`day diff is ${daydiff}`)
 
-// console.log(Math.abs(b - a)) // safe to use
-// console.log(b - a) // not what you want
+let dateTimeStamp1 = date1.getTime();
+let dateTimeStamp2 = date2.getTime();
+
+let midTimeStamp = (dateTimeStamp1 + dateTimeStamp2) / 2;
+
+let midDate = new Date(midTimeStamp);
+console.log(`The middle DateTime is ${midDate}`);
